@@ -55,6 +55,32 @@
             </tbody>
         </table>
     </div>
+
+    <details class="explanation">
+        <summary><strong>How to interpret the scores</strong></summary>
+        <ul>
+            <li><strong>1 = Unique</strong>: This characteristic is uncommon and contributes to making your fingerprint more identifiable.</li>
+            <li><strong>0 = Common</strong>: This characteristic is shared by many users and doesn’t make your fingerprint stand out.</li>
+        </ul>
+        <p>
+            For example:
+        </p>
+        <ul>
+            <li><strong>Platform = 1</strong>: Your operating system or device type is uncommon (e.g., Linux or unusual OS/browser combos).</li>
+            <li><strong>User Agent = 0</strong>: Your browser version and engine are commonly used.</li>
+            <li><strong>Multiple Languages = 0</strong>: Single or common language settings (like only English) are typical.</li>
+            <li><strong>Uncommon Screen Resolution = 0</strong>: Your screen size and pixel ratio are very common.</li>
+            <li><strong>Timezone Info = 1</strong>: Your time zone may be rare or mismatched with your system locale.</li>
+            <li><strong>Low Device Memory = 0</strong>: You have a standard or higher amount of memory (e.g., 8 GB or more).</li>
+            <li><strong>Few CPU Cores = 0</strong>: Your device has more than 2 cores, which is common today.</li>
+        </ul>
+        <p>
+            Scores are determined based on how rare a given feature is among users. The more rare characteristics you have (i.e., more 1s), the easier it is to uniquely identify your browser/device.
+        </p>
+        <p>
+            For more info, visit the <a href="https://github.com/fingerprintjs/fingerprintjs" target="_blank">FingerprintJS documentation</a>.
+        </p>
+    </details>
 </div>
 
 
@@ -66,7 +92,7 @@
 <!-- FingerprintJS -->
 <script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
 
-<!-- GOOGLE maps JS-->
+<!-- Google maps JS-->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJrchrCOIDfZHK-pu06gf9IisH0dEtmug"></script>
 
 <!-- Custom Script -->
