@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>User Info Awareness</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+<h1>🔍 What Your Browser Shares</h1>
+
+<div class="section">
+    <h2>📡 Network & Location</h2>
+    <div id="map" class="map"></div>
+    <pre id="ip-info">Loading...</pre>
+</div>
+
+<div class="section">
+    <h2>🖥️ Device & Browser</h2>
+    <pre id="device-info"></pre>
+</div>
+
+<div class="section">
+    <h2>🧠 Fingerprint & Privacy Score</h2>
+    <pre id="fp-info"></pre>
+    <div id="risk-level"></div>
+
+    <details class="explanation">
+        <summary>What does this mean?</summary>
+        <p>
+            Your browser fingerprint is a collection of device, browser, and behavior attributes that can uniquely identify you among many users.
+            Even without cookies, websites can often recognize you using this method.
+        </p>
+        <p>
+            The <strong>privacy score</strong> above is a simple estimation based on how unique some of your characteristics are (e.g. screen size, language, device memory, CPU cores).
+            The more unique, the easier it is to identify you.
+        </p>
+        <p>
+            This demo uses the <a href="https://fingerprint.com" target="_blank" rel="noopener noreferrer">FingerprintJS library</a>, an open-source tool that estimates browser uniqueness.
+            You can view their <a href="https://dev.fingerprint.com/docs" target="_blank" rel="noopener noreferrer">developer documentation here</a>.
+        </p>
+    </details>
+
+    <div id="fp-breakdown" class="card">
+        <h3>📊 Uniqueness Breakdown</h3>
+        <table>
+            <thead>
+            <tr>
+                <th>Characteristic</th>
+                <th>Score</th>
+            </tr>
+            </thead>
+            <tbody id="fp-breakdown-body">
+            <!-- Filled by JS -->
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="section">
+    <h2>🌐 Other Info</h2>
+    <pre id="other-info"></pre>
+</div>
+
+<!-- FingerprintJS -->
+<script src="https://cdn.jsdelivr.net/npm/@fingerprintjs/fingerprintjs@3/dist/fp.min.js"></script>
+
+<!-- GOOGLE maps JS-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJrchrCOIDfZHK-pu06gf9IisH0dEtmug"></script>
+
+<!-- Custom Script -->
+<script src="js/script.js"></script>
+</body>
+</html>

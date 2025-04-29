@@ -1,0 +1,60 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  background: #f7f7f7;
+}
+h1, h2 {
+  color: #333;
+}
+pre {
+  background: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+.section {
+  margin-bottom: 2rem;
+}
+.risk {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+}
+.low {
+  background: #c8f7c5;
+  color: #2c662d;
+}
+.moderate {
+  background: #fff3cd;
+  color: #856404;
+}
+.high {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+#fp-breakdown {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+#fp-breakdown table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+}
+
+#fp-breakdown th,
+#fp-breakdown td {
+  padding: 0.5rem;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+
